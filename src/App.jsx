@@ -1,15 +1,18 @@
-import { useState } from 'react'
-
 import Navbar from './components/Navbar'
+import About from './components/About'
 
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div>
-      <Navbar />
+      <div className='flex flex-wrap justify-between text-2xl w-screen z-1000'>
+        <Navbar />
+      </div>
+      <div>
+
+      </div>
     </div>
   )
 }
