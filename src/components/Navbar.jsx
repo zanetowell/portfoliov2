@@ -1,27 +1,70 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { FaBars, FaTimes, FaGithub, FaLinkedin} from 'react-icons/fa'
+import { HiOutlineMail } from 'react-icons/hi'
+import { BsFillPersonLinesFill } from 'react-icons/bs'
 import { Link } from 'react-scroll'
-import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
 
 
 
-function MyNav() {
+
+
+function Navbar() {
+  const [nav, setNav] = useState(false)
+  const handleClick = () => setNav(!nav)
+
   return (
-    <div className='inline-flex justify-between w-screen'>
-      <div className='ml-4 mt-4 mr-2'>
-        <h1 className='text-4xl'>Zane Towell</h1>
+    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300'>
+      <div>
+        <p>Zane Towell</p>
       </div>
-      <div className='flex mt-4 gap-3 mr-4'>
-        <p className='cursor-pointer text-3xl'>Home</p>
-        <p className='cursor-pointer text-3xl'>About</p>
-        <p className='cursor-pointer text-3xl'>Skills</p>
-        <p className='cursor-pointer text-3xl'>Projects</p>
-        <p className='cursor-pointer text-3xl'>Contact</p>
+      {/* Links */}
+        <ul className='hidden md:flex'>
+          <li>Home</li>
+          <li>About</li>
+          <li>Skills</li>
+          <li>Projects</li>
+          <li>Contact</li>
+        </ul>
+      {/* Hamburger */}
+      <div onClick={handleClick} className='md:hidden z-10'>
+        {!nav ? <FaBars /> : <FaTimes />}
+      </div>
+      {/* Mobile Menu */}
+      <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'}>
+        <li className='py-6 text-4xl'>Home</li>
+        <li className='py-6 text-4xl'>About</li>
+        <li className='py-6 text-4xl'>Skills</li>
+        <li className='py-6 text-4xl'>Projects</li>
+        <li className='py-6 text-4xl'>Contact</li>
+      </ul>
+      {/* Social icons */}
+      <div className='hidden lg:flex fixed flex-col top-[30%] left-0'>
+        <ul>
+          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-500'>
+            <a className='flex justify-between items-center w-full text-gray-300'
+              href='/'>LinkedIn <FaLinkedin size={30}/>
+            </a>
+          </li>
+          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]'>
+            <a className='flex justify-between items-center w-full text-gray-300'
+              href='/'>GitHub <FaGithub size={30}/>
+            </a>
+          </li>
+          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]'>
+            <a className='flex justify-between items-center w-full text-gray-300'
+              href='/'>Email <HiOutlineMail size={30}/>
+            </a>
+          </li>
+          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]'>
+            <a className='flex justify-between items-center w-full text-gray-300'
+              href='/'>Resume <BsFillPersonLinesFill size={30}/>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   );
 }
 
 
-export default MyNav
+export default Navbar
