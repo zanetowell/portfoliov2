@@ -3,6 +3,8 @@ import Poke from '../assets/projects/pokelibrary.png'
 import Waters from '../assets/projects/watersreviewed.png'
 import Sandwich from '../assets/projects/sandwichio.png'
 import Curate from '../assets/projects/curate.png'
+import Reactadmin from '../assets/projects/reactadmin.png'
+import Loom from '../assets/projects/loom.png'
 
 const Projects = () => {
   return (
@@ -31,32 +33,32 @@ const Projects = () => {
             </div>
           </div>
 
-          <div style={{backgroundImage: `url(${Waters})`}}  className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
+          <div style={{backgroundImage: `url(${Reactadmin})`}}  className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
             <div className='opacity-0 group-hover:opacity-100'>
               <span className='text-2xl font-bold text-white tracking-wider'>
-                Waters: Reviewed
+                React Admin Dashboard
               </span>
               <div className='pt-8 text-center'>
-                <a href='https://waters-reviewed.herokuapp.com/' target='_blank'>
+                <a href='https://zanetowell-admin-dashboard.netlify.app/' target='_blank'>
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>Demo</button>
                 </a>
-                <a href='https://github.com/zanetowell/Waters-Reviewed' target='_blank'>
+                <a href='https://github.com/zanetowell/react-admin' target='_blank'>
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>Code</button>
                 </a>
               </div>
             </div>
           </div>
 
-          <div style={{backgroundImage: `url(${Sandwich})`}}  className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
+          <div style={{backgroundImage: `url(${Loom})`}}  className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
             <div className='opacity-0 group-hover:opacity-100'>
               <span className='text-2xl font-bold text-white tracking-wider'>
-                Sandwich.IO
+                Loom
               </span>
               <div className='pt-8 text-center'>
-                <a href='https://sandwich-io.herokuapp.com/' target='_blank'>
+                <a href='https://loom-nine.vercel.app/' target='_blank'>
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>Demo</button>
                 </a>
-                <a href='https://github.com/zanetowell/sandwich.io' target='_blank'>
+                <a href='https://github.com/zanetowell/Loom' target='_blank'>
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>Code</button>
                 </a>
               </div>
