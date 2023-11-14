@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { FaBars, FaTimes, FaGithub, FaLinkedin} from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
 import { Link } from 'react-scroll'
-import logo from '../assets/logo.png'
 
 
 
@@ -13,9 +12,9 @@ function Navbar() {
   const handleClick = () => setNav(!nav)
 
   return (
-    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300'>
+    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#1a1a1a] text-gray-300 z-50'>
       <div>
-        <img src={logo} alt='Logo Image' style={{ width: '100px'}} />
+        <h1 className='text-4xl'>Zane Towell</h1>
       </div>
 
       {/* Links */}
@@ -45,7 +44,7 @@ function Navbar() {
       {/* Mobile Menu */}
       <ul className={!nav
          ? 'hidden' 
-         : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center '}>
+         : 'absolute top-0 left-0 w-full h-screen bg-[#1a1a1a] flex flex-col justify-center items-center '}>
         <li className='py-6 text-4xl hover:text-white duration-200 hover:scale-110'>
           <Link onClick={handleClick} to='home' smooth={true}>Home</Link>
         </li>
@@ -62,7 +61,7 @@ function Navbar() {
           <Link onClick={handleClick} to='contact' smooth={true}>Contact</Link>
         </li>
         <li className='py-6 text-4xl hover:text-white duration-200 hover:scale-110'>
-          <a href='https://docs.google.com/document/d/e/2PACX-1vQ0PP-nZU4PzCAHGi6cxFY7saOU6HBi6fh524lBfj-zoCYvy1MkLCAfHPNM-oho0jajIYd3mT-I36KI/pub' target='_blank'>Resume</a>
+          <a href='https://docs.google.com/document/d/e/2PACX-1vQ0PP-nZU4PzCAHGi6cxFY7saOU6HBi6fh524lBfj-zoCYvy1MkLCAfHPNM-oho0jajIYd3mT-I36KI/pub' target='_blank' rel='noreferrer'>Resume</a>
         </li>
       </ul>
 
@@ -71,12 +70,12 @@ function Navbar() {
         <ul>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-500'>
             <a className='flex justify-between items-center w-full text-gray-300'
-              href='https://www.linkedin.com/in/zane-towell/' target='_blank'>LinkedIn <FaLinkedin size={30}/>
+              href='https://www.linkedin.com/in/zane-towell/' target='_blank' rel='noreferrer'>LinkedIn <FaLinkedin size={30}/>
             </a>
           </li>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]'>
             <a className='flex justify-between items-center w-full text-gray-300'
-              href='https://github.com/zanetowell' target='_blank'>GitHub <FaGithub size={30}/>
+              href='https://github.com/zanetowell' target='_blank' rel='noreferrer'>GitHub <FaGithub size={30}/>
             </a>
           </li>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]'>
@@ -86,7 +85,7 @@ function Navbar() {
           </li>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]'>
             <a className='flex justify-between items-center w-full text-gray-300'
-              href='https://docs.google.com/document/d/e/2PACX-1vQ0PP-nZU4PzCAHGi6cxFY7saOU6HBi6fh524lBfj-zoCYvy1MkLCAfHPNM-oho0jajIYd3mT-I36KI/pub' target='_blank'>Resume <BsFillPersonLinesFill size={30}/>
+              href='https://docs.google.com/document/d/e/2PACX-1vQ0PP-nZU4PzCAHGi6cxFY7saOU6HBi6fh524lBfj-zoCYvy1MkLCAfHPNM-oho0jajIYd3mT-I36KI/pub' target='_blank' rel='noreferrer'>Resume <BsFillPersonLinesFill size={30}/>
             </a>
           </li>
         </ul>
